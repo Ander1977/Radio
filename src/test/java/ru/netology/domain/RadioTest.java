@@ -28,7 +28,6 @@ class RadioTest {
         radio.decreaseCurrentStation();
         assertEquals(7, radio.getCurrentStation());
     }
-
     @Test
     void increaseMaxStation() {
         Radio radio = new Radio();
@@ -51,7 +50,6 @@ class RadioTest {
         radio.decreaseCurrentStation();
         assertEquals(9, radio.getCurrentStation());
     }
-
     @Test
     void MinStation() {
         Radio radio = new Radio();
@@ -94,9 +92,6 @@ class RadioTest {
         radio.decreaseCurrentVolume();
         assertEquals(6, radio.getCurrentVolume());
     }
-
-
-
     @Test
     void MinVolume() {
         Radio radio = new Radio();
@@ -139,6 +134,4 @@ class RadioTest {
         radio.decreaseCurrentVolume();
         assertEquals(0, radio.getCurrentVolume());
     }
-
-
 }
