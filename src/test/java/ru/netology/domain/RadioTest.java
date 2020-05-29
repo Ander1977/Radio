@@ -29,7 +29,28 @@ class RadioTest {
         assertEquals(7, radio.getCurrentStation());
     }
 
-
+    @Test
+    void increaseMaxStation() {
+        Radio radio = new Radio();
+        radio.setName("Asus");
+        radio.setMaxStation(9);
+        radio.setMinStation(0);
+        radio.setOn(true);
+        radio.setCurrentStation(9);
+        radio.increaseCurrentStation();
+        assertEquals(0, radio.getCurrentStation());
+    }
+    @Test
+    void decreaseMinStation() {
+        Radio radio = new Radio();
+        radio.setName("Asus");
+        radio.setMaxStation(9);
+        radio.setMinStation(0);
+        radio.setOn(true);
+        radio.setCurrentStation(0);
+        radio.decreaseCurrentStation();
+        assertEquals(9, radio.getCurrentStation());
+    }
 
     @Test
     void MinStation() {

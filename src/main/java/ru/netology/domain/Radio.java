@@ -12,16 +12,22 @@ public class Radio {
 
     public void increaseCurrentStation() {
         if (currentStation == maxStation) {
-            return;
+
         }
         currentStation++;
+        if (currentStation > maxStation) {
+            currentStation = minStation;
+        }
 
     }
     public void decreaseCurrentStation() {
         if (currentStation == minStation) {
-            return;
+
         }
         currentStation--;
+        if (currentStation < minStation) {
+            currentStation = maxStation;
+        }
 
     }
 
@@ -72,13 +78,11 @@ public class Radio {
     public void setCurrentStation(int currentStation) {
         if (currentStation > maxStation) {
             return;
-        }
+            }
         if (currentStation < minStation) {
-           return;
+            return;
         }
-
         this.currentStation = currentStation;
-
     }
 
     public int getMaxVolume() {
