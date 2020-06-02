@@ -1,14 +1,14 @@
 package ru.netology.domain;
 
 public class Radio {
-    private String name;
-    private int maxStation;
-    private int minStation;
-    private int currentStation;
-    private int maxVolume;
-    private int minVolume;
-    private int currentVolume;
-    private boolean on;
+    private String name = "Asus";
+    private int maxStation = 10;
+    private int minStation = 0;
+    private int currentStation = 5;
+    private int maxVolume = 100;
+    private int minVolume = 0;
+    private int currentVolume = 0;
+    private boolean on = true;
 
     public void increaseCurrentStation() {
         if (currentStation >= maxStation) {
