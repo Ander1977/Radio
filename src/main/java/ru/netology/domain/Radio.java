@@ -10,6 +10,9 @@ public class Radio {
     private int currentVolume = 0;
     private boolean on = true;
 
+    public Radio() {
+    }
+
     public void increaseCurrentStation() {
         if (currentStation >= maxStation) {
             currentStation = minStation;

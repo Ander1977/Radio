@@ -5,10 +5,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class RadioTest {
-   private Radio radio = new Radio();
+    Radio radio = new Radio();
 
     @Test
-    void shouldInitFields() {
+    void shouldUsNoArgsConstructor() {
+
         assertEquals("Asus", radio.getName());
         assertEquals(10, radio.getMaxStation());
         assertEquals(0, radio.getMinStation());
@@ -19,8 +20,10 @@ class RadioTest {
         assertEquals(true, radio.isOn());
     }
 
+
     @Test
     void increaseCurrentStation() {
+
         radio.increaseCurrentStation();
 
         assertEquals(6, radio.getCurrentStation());
