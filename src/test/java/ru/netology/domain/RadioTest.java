@@ -8,8 +8,12 @@ class RadioTest {
     Radio radio = new Radio();
 
     @Test
-    void shouldUsNoArgsConstructor() {
+    void shouldUseMaxStationConstructor() {
+        assertEquals(10, radio.getMaxStation());
+    }
 
+    @Test
+    void shouldUseNoArgsConstructor() {
         assertEquals("Asus", radio.getName());
         assertEquals(10, radio.getMaxStation());
         assertEquals(0, radio.getMinStation());
@@ -17,13 +21,12 @@ class RadioTest {
         assertEquals(100, radio.getMaxVolume());
         assertEquals(0, radio.getMinVolume());
         assertEquals(0, radio.getCurrentVolume());
-        assertEquals(true, radio.isOn());
+        assertTrue(radio.isOn());
     }
 
 
     @Test
     void increaseCurrentStation() {
-
         radio.increaseCurrentStation();
 
         assertEquals(6, radio.getCurrentStation());
