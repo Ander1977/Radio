@@ -2,7 +2,6 @@ package ru.netology.domain;
 
 public class Radio {
     private String name = "Asus";
-    private int allStation = 11;
     private int maxStation = 10;
     private int minStation = 0;
     private int currentStation = 5;
@@ -13,9 +12,12 @@ public class Radio {
 
     public Radio() {
     }
-    public Radio(int allStation) {
-        this.allStation = allStation;
+
+    public Radio(int maxStation) {
+
+        this.maxStation = maxStation;
     }
+
     public void increaseCurrentStation() {
         if (currentStation >= maxStation) {
             currentStation = minStation;
@@ -23,6 +25,7 @@ public class Radio {
         }
         currentStation++;
     }
+
     public void decreaseCurrentStation() {
         if (currentStation <= minStation) {
             currentStation = maxStation;
@@ -30,18 +33,21 @@ public class Radio {
         }
         currentStation--;
     }
+
     public void increaseCurrentVolume() {
         if (currentVolume == maxVolume) {
             return;
         }
         currentVolume++;
     }
+
     public void decreaseCurrentVolume() {
         if (currentVolume == minVolume) {
             return;
         }
         currentVolume--;
     }
+
     public String getName() {
         return name;
     }
@@ -50,12 +56,6 @@ public class Radio {
         this.name = name;
     }
 
-    public int getAllStation() {
-        return allStation;
-    }
-    public void setAllStation(int allStation) {
-        this.allStation = allStation;
-    }
     public int getMaxStation() {
         return maxStation;
     }
@@ -64,6 +64,7 @@ public class Radio {
 
         this.maxStation = maxStation;
     }
+
     public int getMinStation() {
         return minStation;
     }
@@ -72,6 +73,7 @@ public class Radio {
 
         this.minStation = minStation;
     }
+
     public int getCurrentStation() {
         return currentStation;
     }
@@ -85,6 +87,7 @@ public class Radio {
         }
         this.currentStation = currentStation;
     }
+
     public int getMaxVolume() {
         return maxVolume;
     }
@@ -114,6 +117,7 @@ public class Radio {
         }
         this.currentVolume = currentVolume;
     }
+
     public boolean isOn() {
         return on;
     }
