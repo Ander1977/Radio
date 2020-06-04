@@ -8,8 +8,8 @@ class RadioTest {
     Radio radio = new Radio();
 
     @Test
-    void shouldUseMaxStationConstructor() {
-        assertEquals(10, radio.getMaxStation());
+    void shouldUseAllStationConstructor() {
+        assertEquals(11, radio.getAllStation());
     }
 
     @Test
@@ -23,7 +23,6 @@ class RadioTest {
         assertEquals(0, radio.getCurrentVolume());
         assertTrue(radio.isOn());
     }
-
 
     @Test
     void increaseCurrentStation() {

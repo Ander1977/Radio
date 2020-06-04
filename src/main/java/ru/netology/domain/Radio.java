@@ -2,6 +2,7 @@ package ru.netology.domain;
 
 public class Radio {
     private String name = "Asus";
+    private int allStation = 11;
     private int maxStation = 10;
     private int minStation = 0;
     private int currentStation = 5;
@@ -10,10 +11,10 @@ public class Radio {
     private int currentVolume = 0;
     private boolean on = true;
 
-    public Radio(int maxStation) {
-        this.maxStation = maxStation;
-    }
     public Radio() {
+    }
+    public Radio(int allStation) {
+        this.allStation = allStation;
     }
     public void increaseCurrentStation() {
         if (currentStation >= maxStation) {
@@ -50,6 +51,12 @@ public class Radio {
         this.name = name;
     }
 
+    public int getAllStation() {
+        return allStation;
+    }
+    public void setAllStation(int allStation) {
+        this.allStation = allStation;
+    }
     public int getMaxStation() {
         return maxStation;
     }
