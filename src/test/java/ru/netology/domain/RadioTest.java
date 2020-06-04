@@ -8,7 +8,7 @@ class RadioTest {
     Radio radio = new Radio("Asus", 10, 0, 5, 100, 0, 0, true);
 
     @Test
-    void shouldUseNoArgsConstructor() {
+    void shouldUseAllArgsConstructor() {
         Radio radio = new Radio("Asus", 10, 0, 5, 100, 0, 0, true);
         assertEquals("Asus", radio.getName());
         assertEquals(10, radio.getMaxStation());
