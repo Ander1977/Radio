@@ -8,7 +8,6 @@ import lombok.Data;
 @AllArgsConstructor
 public class Radio {
     private String name = "Asus";
-    private int allStation = 11;
     private int maxStation = 10;
     private int minStation = 0;
     private int currentStation = 5;
