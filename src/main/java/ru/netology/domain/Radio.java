@@ -2,12 +2,13 @@ package ru.netology.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+
 
 @Data
 @AllArgsConstructor
 public class Radio {
     private String name = "Asus";
+    private int allStation = 11;
     private int maxStation = 10;
     private int minStation = 0;
     private int currentStation = 5;

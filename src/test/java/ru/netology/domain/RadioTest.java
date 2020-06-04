@@ -5,12 +5,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class RadioTest {
-    Radio radio = new Radio("Asus", 10, 0, 5, 100, 0, 0, true);
+    Radio radio = new Radio("Asus", 11, 10, 0, 5, 100, 0, 0,true);
 
     @Test
     void shouldUseAllArgsConstructor() {
-        Radio radio = new Radio("Asus", 10, 0, 5, 100, 0, 0, true);
+        Radio radio = new Radio("Asus", 11, 10, 0, 5, 100, 0, 0,true);
         assertEquals("Asus", radio.getName());
+        assertEquals(11, radio.getAllStation());
         assertEquals(10, radio.getMaxStation());
         assertEquals(0, radio.getMinStation());
         assertEquals(5, radio.getCurrentStation());
