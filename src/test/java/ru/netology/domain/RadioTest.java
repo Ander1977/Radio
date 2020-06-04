@@ -17,13 +17,11 @@ class RadioTest {
         assertEquals(100, radio.getMaxVolume());
         assertEquals(0, radio.getMinVolume());
         assertEquals(0, radio.getCurrentVolume());
-        assertEquals(true, radio.isOn());
+        assertTrue( radio.isOn());
     }
-
 
     @Test
     void increaseCurrentStation() {
-
         radio.increaseCurrentStation();
 
         assertEquals(6, radio.getCurrentStation());
@@ -57,7 +55,6 @@ class RadioTest {
     @Test
     void minStation() {
         radio.setCurrentStation(-1);
-
 
         assertEquals(5, radio.getCurrentStation());
     }
