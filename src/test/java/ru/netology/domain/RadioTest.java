@@ -60,7 +60,6 @@ class RadioTest {
     void minStation() {
         radio.setCurrentStation(-1);
 
-
         assertEquals(5, radio.getCurrentStation());
     }
 
